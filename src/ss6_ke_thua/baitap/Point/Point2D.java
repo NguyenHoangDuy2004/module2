@@ -1,17 +1,16 @@
 package ss6_ke_thua.baitap.Point;
 
 public class Point2D {
-    public float x ;
-    public float y ;
+    private float x = 0.0f;
+    private float y = 0.0f;
 
-    public Point2D(float x , float y){
-        this.x = x ;
-        this.y = y ;
+    public Point2D() {
+
     }
 
-    public Point2D(){
-        this.x = 0.0f;
-        this.y = 0.0f;
+    public Point2D(float x, float y) {
+        this.x = x;
+        this.y = y;
     }
 
     public float getX() {
@@ -30,17 +29,13 @@ public class Point2D {
         this.y = y;
     }
 
-    public void setXY(float x , float y){
-        this.x = x;
-        this.y = y;
-    }
-
     public float[] getXY() {
-        return new float[]{x , y} ;
+        float[] arr = {getX(), getY()};
+        return arr;
     }
 
-    public String toString(){
-        return (" x " + " y" ) ;
+    public String toString() {
+        return "( " + getX() + ", " + getY() + ")";
     }
 
 }
